@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import Form from "./Components/Form"
+import {useState} from "react";
 import './App.css';
+import AllTranstion from "./Components/AllTranstions";
 
+type MainData={
+  expenses:string;
+  amount:number;
+  category:string;
+}
 function App() {
+  const [allData, setAllData]=useState<MainData[]>([])
+  function addAllexpenses(data:MainData){
+    
+    setAllData((prevdata)=>{
+      return [...prevdata,data]
+    })
+  }
+  console.log(allData);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Form addAllexpenses={addAllexpenses} />
+      <AllTranstion allData={allData} />
+
     </div>
   );
 }
