@@ -20,7 +20,7 @@ function App() {
   return (
     <div className="App">
       <Form addAllexpenses={addAllexpenses} />
-      <AllTranstion allData={allData} />
+      <AllTranstion allData={allData} ></AllTranstion>
 
     </div>
   );
