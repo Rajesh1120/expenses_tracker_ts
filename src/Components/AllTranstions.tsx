@@ -3,8 +3,11 @@ type MainData={
     amount:number;
     category:string;
   }
+type MainDataAll={
+    allData:MainData[];
+}
 
-export default function AllTranstion(allData:MainData[]){
+export default function AllTranstion({allData}:MainDataAll){
     return (
         <>
             <div>

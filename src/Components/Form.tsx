@@ -39,7 +39,7 @@ const Input=({addAllexpenses}:InputProps)=>{
             <option value="other">other</option>
 
         </select>
-        <input  type="submit" onClick={handleSubmit}value="submit"/>
+        <input  type="submit" onClick={handleSubmit} value="submit"/>
         </>
     )
 }

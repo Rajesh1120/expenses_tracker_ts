@@ -8,6 +8,7 @@ type MainData={
   amount:number;
   category:string;
 }
+
 function App() {
   const [allData, setAllData]=useState<MainData[]>([])
   function addAllexpenses(data:MainData){
