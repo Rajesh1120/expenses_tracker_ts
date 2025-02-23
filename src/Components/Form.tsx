@@ -10,7 +10,10 @@ type InputProps={
 }
 
 const Input=({addAllexpenses}:InputProps)=>{
-
+    function handleApi(){
+        const api= fetch('https://www.google.com').then(res=> res.json).then(data=> console.log(data));
+        console.log(api);
+    }
     const [data,setData]=useState({
         id:0,
         expenses:"",
@@ -42,6 +45,8 @@ const Input=({addAllexpenses}:InputProps)=>{
             <option value="other">other</option>
 
         </select>
+
+        <button onClick={handleApi}>Google</button>
         <input  type="submit" onClick={handleSubmit} value="submit"/>
         </>
     )
