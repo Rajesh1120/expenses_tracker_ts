@@ -4,6 +4,7 @@ import './App.css';
 import AllTranstion from "./Components/AllTranstions";
 
 type MainData={
+  id:number;
   expenses:string;
   amount:number;
   category:string;
@@ -21,7 +22,7 @@ function App() {
   return (
     <div className="App">
       <Form addAllexpenses={addAllexpenses} />
-      <AllTranstion allData={allData} ></AllTranstion>
+      <AllTranstion setAllData={setAllData} allData={allData} />
 
     </div>
   );
